@@ -1,0 +1,2 @@
+---
+service_example_variable: "variable for prod environment. overwrites global variables. could also be variable from prod vault"

@@ -1,0 +1,6 @@
+.vscode
+.idea
+.vagrant
+*.log
+.vault_pass
+.ssh/id_ansible

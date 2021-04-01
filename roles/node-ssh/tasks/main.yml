@@ -1,0 +1,18 @@
+---
+- name: add authorized ssh keys
+  tags: node-ssh
+  authorized_key:
+    user: root
+    state: present
+    key: '{{ item }}'
+  with_file:
+    - public_keys/ansible.pub
+
+- name: add authorized ssh keys
+  tags: node-ssh
+  authorized_key:
+    user: deploy
+    state: present
+    key: '{{ item }}'
+  with_file:
+    - public_keys/ansible.pub

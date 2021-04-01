@@ -1,0 +1,2 @@
+---
+service_example_variable: "could be a service specific vault variable e.g. service_example_vault.yml"

@@ -1,0 +1,12 @@
+---
+- hosts: all
+  any_errors_fatal: true
+  roles:
+    - role: geerlingguy.git
+    - role: geerlingguy.pip
+    - role: geerlingguy.security
+
+- hosts: prod
+  any_errors_fatal: true
+  roles:
+    - role: node-ssh
