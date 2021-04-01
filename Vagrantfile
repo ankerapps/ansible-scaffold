@@ -29,6 +29,7 @@ Vagrant.configure("2") do |config|
       ssh_pub_key = File.readlines(".ssh/ansible.pub").first.strip
       node.vm.provision 'shell', inline: 'mkdir -p /root/.ssh'
       node.vm.provision 'shell', inline: "echo #{ssh_pub_key} >> /root/.ssh/authorized_keys"
+      node.vm.provision 'shell', inline: "chmod 700 /root/.ssh/"
       
       node.vm.provision "shell", inline: <<-SHELL
       apt-get update
